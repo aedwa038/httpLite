@@ -109,6 +109,7 @@ class HTTPLiteServer (object):
         print 'Socket bind complete'
 
         sock.listen(10)
+        print 'Listening to port :' + str(PORT)
         while 1:
             #wait to accept a connection - blocking call
             conn, addr = sock.accept()

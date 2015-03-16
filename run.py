@@ -27,7 +27,7 @@ def read_file(filename):
     return data
 
 def extractpath(path):
-    print "path is " + path 
+    print "path is " + path
     filename = ''
     path = unquote(path)
     print "path is " +  path
@@ -42,7 +42,7 @@ def extractpath(path):
     #used for windows needs to be changed when transfered to linux
     filename = somepath + filename
     return filename
-                
+
 
 def get_command(request):
     strings = request.split()
@@ -88,7 +88,7 @@ def file_exists(filename):
         return False
 
 def get_status_code(filename):
-    status_code = PROTOCOL + ' ';
+    status_code = PROTOCOL + ' '
     if(file_exists(filename)):
         return status_code + OK_STATUS_CODE + '\n'
     else:
@@ -110,6 +110,7 @@ def client_thread(conn):
 while 1:
     #wait to accept a connection - blocking call
     conn, addr = s.accept()
+    print 'Listening to port :' + str(PORT)
     #display client information
     print 'Connected with ' + addr[0] + ':' + str(addr[1])
     client_thread(conn)
