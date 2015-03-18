@@ -70,7 +70,7 @@ class HTTPLiteServer (object):
             else:
                 reply = self.not_found()
         elif(command == "HEAD"):
-            header = PROTOCOL + ' ' +METHOD_NOT_ALLOWED
+            header = PROTOCOL + ' ' +OK_STATUS_CODE
             reply = self.get_default_headers()
             reply = header + '\r\n' + reply
         else:
