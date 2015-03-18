@@ -1,3 +1,0 @@
-PORT=8081
-ROOT='public_html'
-LOGFILE='lite.log'
